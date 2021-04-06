@@ -20,3 +20,15 @@ If you have any issues try the following:
 - Ensure your client id and secrets are correct in the services: application.yml file.
 - Enable debug logging in the application.yml file of your properties file to check the logs.
 - You can use the realm-export.json file to import the keycloak demo realm with all the settings.
+
+
+### Module 4
+- need set up the following uri's in application.yml for the provider:
+  * token-uri
+  * authorization-uri
+  * user-info-uri
+  * jwk-set-uri
+- need set up user-name-attribute for the provider
+  * the values has to match one of the userinfo service returned keys 
+- When in debug mode, better set the token expiration time to be longer, for example, 30 minutes
+  
