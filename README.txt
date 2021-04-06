@@ -22,7 +22,7 @@ If you have any issues try the following:
 - You can use the realm-export.json file to import the keycloak demo realm with all the settings.
 
 
-### Module 4
+#Module 4
 - need set up the following uri's in application.yml for the provider:
   * token-uri
   * authorization-uri
