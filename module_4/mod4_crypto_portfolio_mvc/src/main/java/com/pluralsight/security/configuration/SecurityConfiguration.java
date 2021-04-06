@@ -31,7 +31,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //				.defaultSuccessUrl("/portfolio",true)
 //				.and()
 			.oauth2Login()
-				.loginPage("/login")
+				.loginPage("/oauth2/authorization/crypto-portfolio")
 				.successHandler(oauthSuccessHandler)
 				.userInfoEndpoint()
 					.customUserType(FacebookConnectUser.class, "facebook")

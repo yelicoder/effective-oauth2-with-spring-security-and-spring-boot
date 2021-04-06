@@ -4,12 +4,12 @@ spring:
       client:
         registration:
           facebook:
-            client-id: 329893387589100
-            client-secret: c8433775f2d257f7dea093957368c7cf
-            scope: public_profile email user_location
+            client-id: 254068796447369
+            client-secret: 47e0400c3f46e29ff86560ad9de07f56
+            scope: public_profile email
           google:
-            client-id: 566746547955-p61061irrafjgv1mh0lh77t0ss72tg1i.apps.googleusercontent.com
-            client-secret: TIaTzstyZl8KZ6h35tiAVuHm 
+            client-id: 512911572062-hpvnlt3tiakmrblcor5jqr49e6tjrmfv.apps.googleusercontent.com
+            client-secret: aL4sn408PAKr0Fq4igZyUERb
 logging:
   level:
     root: INFO

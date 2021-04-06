@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 spring:
   security:
     oauth2:
@@ -12,19 +15,20 @@ spring:
             client-secret: TIaTzstyZl8KZ6h35tiAVuHm
           crypto-portfolio:
             client-id: crypto-portfolio
-            client-secret: secret
+            client-secret: e0bb45ee-70b2-4ad3-9d4e-b10c169c3a1b
             client-name: Crypto Portfolio
-            scope: user_info
-            redirect-uri: http://localhost:8080/login/oauth2/code/crypto-portfolio
+            scope: openid
+            redirect-uri: http://localhost:8081/login/oauth2/code/crypto-portfolio
             client-authentication-method: basic
             authorization-grant-type: authorization_code
-            provider: crypto-provider
+            provider: keycloak-provider
         provider:
-            crypto-provider:
-              token-uri: http://localhost:8081/auth/oauth/token
-              authorization-uri: http://localhost:8081/auth/oauth/authorize
-              user-info-uri: http://localhost:8081/auth/userinfo
-              user-name-attribute: username
+            keycloak-provider:
+              token-uri: http://localhost:8080/auth/realms/Cryptoinc/protocol/openid-connect/token
+              authorization-uri: http://localhost:8080/auth/realms/Cryptoinc/protocol/openid-connect/auth
+              user-info-uri: http://localhost:8080/auth/realms/Cryptoinc/protocol/openid-connect/userinfo
+              jwk-set-uri: http://localhost:8080/auth/realms/Cryptoinc/protocol/openid-connect/certs
+              user-name-attribute: name
 logging:
   level:
     root: INFO
